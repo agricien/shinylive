@@ -2,7 +2,7 @@
 # Optimized for Windows symlinks and Wasm GIS dependencies
 
 if (!requireNamespace("shinylive", quietly = TRUE)) {
-  install.packages("shinylive", repos = "https://cran.rstudio.com/")
+  install.packages("shinylive", repos = "https://cloud.r-project.org/")
 }
 
 app_dir <- "app"
@@ -18,10 +18,11 @@ message("Source: ", normalizePath(app_dir))
 message("Destination: ", normalizePath(output_dir, mustWork = FALSE))
 
 # Perform export
-# shinylive::export handles dependency resolution via DESCRIPTION file
+# wasm_packages_repos helps ensure we get the correct Wasm binaries
 shinylive::export(
   appdir = app_dir,
   destdir = output_dir,
+  wasm_packages_repos = "https://repo.r-wasm.org",
   verbose = TRUE
 )
 
