@@ -1,0 +1,15 @@
+Package: antigravity-shinylive
+Type: Application
+Title: Antigravity Shinylive App
+Version: 0.1.0
+Author: Antigravity
+Description: A sample Shiny app with GIS libraries for Wasm deployment.
+Depends:
+    R (>= 4.0.0)
+Imports:
+    shiny,
+    leaflet,
+    sf,
+    terra
+Encoding: UTF-8
+LazyData: true
