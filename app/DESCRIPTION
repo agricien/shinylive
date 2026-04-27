@@ -1,15 +1,16 @@
 Package: antigravity-shinylive
 Type: Application
-Title: Antigravity Shinylive App
-Version: 0.1.0
+Title: Antigravity Interactive Shiny
+Version: 0.2.1
 Author: Antigravity
-Description: A minimal Shiny app for Wasm deployment.
+Description: An interactive Shiny app with Map and Charts for Wasm.
 Depends:
     R (>= 4.0.0)
 Imports:
     shiny,
     leaflet,
     ggplot2,
-    bslib
+    bslib,
+    rlang (>= 1.1.7)
 Encoding: UTF-8
 LazyData: true

@@ -34,6 +34,7 @@ jobs:
           extra-packages: |
             any::shinylive
             any::httpuv
+            any::rlang
 
       - name: Export Shinylive App (Wasm)
         run: |
