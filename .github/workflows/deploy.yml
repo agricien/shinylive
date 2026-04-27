@@ -27,13 +27,16 @@ jobs:
         with:
           use-public-rspm: true
 
-      - name: Install R Dependencies
-        run: |
-          Rscript -e "install.packages(c('shinylive', 'httpuv'), repos = 'https://cran.rstudio.com/')"
+      - name: Install dependencies
+        uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          working-directory: 'app'
+          extra-packages: |
+            any::shinylive
+            any::httpuv
 
       - name: Export Shinylive App (Wasm)
         run: |
-          # Use the export script to maintain consistency with local environment
           Rscript export_app.R
 
       - name: Setup Pages
