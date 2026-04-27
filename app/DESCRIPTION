@@ -7,6 +7,9 @@ Description: A minimal Shiny app for Wasm deployment.
 Depends:
     R (>= 4.0.0)
 Imports:
-    shiny
+    shiny,
+    leaflet,
+    ggplot2,
+    bslib
 Encoding: UTF-8
 LazyData: true
